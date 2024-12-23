@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url(https://myfonts.ru/fonts/1/3/4/1/Gilroy-Light.otf) format('truetype');
+}
+
+
+canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  top: 45%;
+}
+.footer {
+  bottom:3%;
+}
+
+a, a:hover, a:visited {
+  color: white;
+  text-decoration: none;
+}
+.disable-selection {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.first_screen {
+  width: calc(1920 / 1920 * 100vw);
+  height: calc(1080 / 1920 * 100vw);
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  margin-left: calc(78 / 1920 * 100vw);
+  margin-top: calc(55 / 1920 * 100vw);
+}
+
+.dates {
+  font-family: 'Gilroy', arial, serif;
+  color: white;
+  font-size: calc(44 / 1920 * 100vw);
+  font-weight: 600;
+  margin-right: calc(153 / 1920 * 100vw);  }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: calc(57 / 1920 * 100vw);
+
+}
+
+.participation, .schedule, .fq, .partners, .prize, .form {
+  font-family: 'Gilroy', arial, serif;
+  font-weight: 500;
+  font-size: calc(44 / 1920 * 100vw);
+  color: white;
+  background-color: transparent;
+  border: solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.participation:hover, .schedule:hover, .fq:hover, .partners:hover, .prize:hover, .form:hover {
+  color: #BEBEBE;
+}
+
+
+.title {
+  font-family: 'Gilroy', arial, serif;
+  color: white;
+  font-size: calc(465 / 1920 * 100vw);
+  position: relative;
+  margin-top: calc(20 / 1920 * 100vw);
+  margin-left: calc(78 / 1920 * 100vw);
+  text-align: left;
+  font-weight: 700;
+}
+
+.sub_title {
+  font-family: 'Gilroy', arial, serif;
+  color: white;
+  font-size: calc(103 / 1920 * 100vw);
+  position: relative;
+  margin-top: calc(-190 / 1920 * 100vw);
+  margin-left: calc(78 / 1920 * 100vw);
+  margin-right: calc(78 / 1920 * 100vw);
+  text-align: right;
+  font-weight: 500;
+}
+
+
