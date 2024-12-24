@@ -28,27 +28,33 @@ function createWorld() {
   renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(_width, _height);
   renderer.shadowMap.enabled = true;
-  //---
-  document.body.appendChild(renderer.domElement);
 
-  // Make the canvas fixed at the top of the page
-  renderer.domElement.style.position = "fixed";
+  // Добавляем рендерер в контейнер first_screen
+  const container = document.querySelector('.first_screen');
+  container.style.position = "relative"; // Убедитесь, что контейнер имеет относительное позиционирование
+  renderer.domElement.style.position = "absolute";
   renderer.domElement.style.top = "0";
   renderer.domElement.style.left = "0";
-  renderer.domElement.style.zIndex = "-1";
+  renderer.domElement.style.width = "100%";
+  renderer.domElement.style.height = "100%";
+  renderer.domElement.style.zIndex = "-1"; // Размещаем на заднем плане
+  container.appendChild(renderer.domElement);
 
   //---
   window.addEventListener('resize', onWindowResize, false);
 }
 
+
 function onWindowResize() {
-  _width = window.innerWidth;
-  _height = window.innerHeight;
+  const container = document.querySelector('.first_screen');
+  _width = container.clientWidth;
+  _height = container.clientHeight;
   renderer.setSize(_width, _height);
   camera.aspect = _width / _height;
   camera.updateProjectionMatrix();
   console.log('- resize -');
 }
+
 //--------------------------------------------------------------------
 var _ambientLights, _lights;
 function createLights() {
