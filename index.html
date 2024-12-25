@@ -11,23 +11,108 @@
 </head>
 
 <body>
-<div class="container-fluid fixed-top header disable-selection"></div>
+<div class="container"></div>
+<div class="anchor" data-target="null"></div>
+<div class="anchor" data-target="participation"></div>
+<div class="anchor" data-target="schedule"></div>
+<div class="anchor" data-target="fq"></div>
+<div class="anchor" data-target="partners"></div>
+<div class="anchor" data-target="prize"></div>
+<div class="anchor" data-target="form"></div>
 <div class="first_screen">
   <div class="navigation">
     <div class="dates">16-17 ноября</div>
     <div class="buttons">
-      <button class="participation">участие</button>
-      <button class="schedule">расписание</button>
-      <button class="fq">f&q</button>
-      <button class="partners">партнеры</button>
-      <button class="prize">призы</button>
-      <button class="form">заявка</button>
+      <button class="gradient-text" id="null"></button>
+      <button class="gradient-text" id="participation">участие</button>
+      <button class="gradient-text" id="schedule">расписание</button>
+      <button class="gradient-text" id="fq">f&q</button>
+      <button class="gradient-text" id="partners">партнеры</button>
+      <button class="gradient-text" id="prize">призы</button>
+      <button class="gradient-text" id="form">заявка</button>
     </div>
   </div>
   <div class="title">хакатон</div>
   <div class="sub_title">институт цифры</div>
 </div>
-<div class="second_screen"></div>
+<div class="second_screen">
+  <div class="wrap">
+    <div class="items-wrap">
+      <div class="items marquee">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+      <div aria-hidden="true" class="items marquee">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+    </div>
+    <div class="items-wrap">
+      <div class="items marquee reverce">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+      <div aria-hidden="true" class="items marquee reverce">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+    </div>
+    <div class="items-wrap">
+      <div class="items marquee">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+      <div aria-hidden="true" class="items marquee">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+    </div>
+    <div class="items-wrap">
+      <div class="items marquee reverce">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+      <div aria-hidden="true" class="items marquee reverce">
+        <div class="item">back-end</div>
+        <div class="item">тестирование</div>
+        <div class="item">UX/UI</div>
+        <div class="item">аналитика</div>
+        <div class="item">project менеджмент</div>
+        <div class="item">front-end</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="third_screen"></div>
 
 
 <script id="vertexShader" type="x-shader/x-vertex">
@@ -264,8 +349,9 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
 <script src='//cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js'></script>
-<script src="js/Shader_WOGUI.js"></script>
 
+<script src="js/Shader_WOGUI.js"></script>
+<script src="js/GradientButtons.js"></script>
 
 </body>
 </html>

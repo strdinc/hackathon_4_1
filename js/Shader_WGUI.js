@@ -44,11 +44,11 @@ function onWindowResize() {
 //--------------------------------------------------------------------
 var _ambientLights, _lights;
 function createLights() {
-  //_ambientLights = new THREE.AmbientLight(0xFFFFFF, 1);
+  _ambientLights = new THREE.AmbientLight(0xFFFFFF, 1);
   _ambientLights = new THREE.HemisphereLight(0xFFFFFF, 0x000000, 1.4);
   _lights = new THREE.PointLight(0xFFFFFF, .5);
   _lights.position.set(20,20,20);
-  //scene.add(_lights);
+  scene.add(_lights);
   scene.add(_ambientLights);
 }
 //--------------------------------------------------------------------
@@ -150,7 +150,7 @@ function createGUI() {
 var primitiveElement = function() {
   this.mesh = new THREE.Object3D();
   var geo = new THREE.IcosahedronGeometry(1, 6);
-  //var mat = new THREE.MeshPhongMaterial({color:0xFF0000, flatShading:true});
+  var mat = new THREE.MeshPhongMaterial({color:0xFF0000, flatShading:true});
   mat = new THREE.ShaderMaterial({
     wireframe:false,
     uniforms: uniforms,

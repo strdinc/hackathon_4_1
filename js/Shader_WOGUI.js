@@ -30,7 +30,7 @@ function createWorld() {
   renderer.shadowMap.enabled = true;
 
   // Добавляем рендерер в контейнер first_screen
-  const container = document.querySelector('.first_screen');
+  const container = document.querySelector('.container');
   container.style.position = "relative"; // Убедитесь, что контейнер имеет относительное позиционирование
   renderer.domElement.style.position = "absolute";
   renderer.domElement.style.top = "0";
@@ -193,7 +193,7 @@ function animation() {
 
   var time = Date.now() * 0.003;
 
-  TweenMax.to(camera.position, 1, {z:10});
+  TweenMax.to(camera.position, 1, {z:11});
 
   _primitive.mesh.rotation.y += 0.001;
   mat.uniforms['time'].value = 0.000154 * (Date.now() - start);

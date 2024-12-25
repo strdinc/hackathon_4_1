@@ -3,6 +3,23 @@
   src: url(https://myfonts.ru/fonts/1/3/4/1/Gilroy-Light.otf) format('truetype');
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  font-family: 'Gilroy', serif;
+  background-color: #0D0C10;
+  overflow-x: hidden;
+}
 
 canvas {
   display: block;
@@ -29,24 +46,34 @@ a, a:hover, a:visited {
   -webkit-touch-callout: none;
 }
 
+.container {
+  position: absolute; /* Выход из потока */
+  top: calc(-100 / 1920 * 100vw);
+  left: 0;
+  width: 100vw;
+  z-index: -1; /* Помещаем на задний план */
+  margin: 0; /* Убираем возможные отступы */
+}
+
+
 .first_screen {
   width: calc(1920 / 1920 * 100vw);
   height: calc(1080 / 1920 * 100vw);
   position: relative;
-  overflow: hidden;
-  margin-top: 0;
-  margin-left: 0;
 }
 
 .navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Навигация на всю ширину */
+  z-index: 1000; /* Поверх остального контента */
+  backdrop-filter: blur(10px); /* Размытие под навигацией */
+  background-color: rgba(10, 10, 13, 0.25); /* Полупрозрачный фон */
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  height: auto;
 
-  margin-left: calc(78 / 1920 * 100vw);
-  margin-top: calc(55 / 1920 * 100vw);
+  padding-bottom: calc(5 / 1920 * 100vw);
+  margin-right: calc(78 / 1920 * 100vw);;
 }
 
 .dates {
@@ -54,39 +81,98 @@ a, a:hover, a:visited {
   color: white;
   font-size: calc(44 / 1920 * 100vw);
   font-weight: 600;
-  margin-right: calc(153 / 1920 * 100vw);  }
+  margin-left: calc(78 / 1920 * 100vw);
+}
 
 .buttons {
   display: flex;
   flex-direction: row;
   gap: calc(57 / 1920 * 100vw);
-
+  margin-left: auto;
+  margin-right: calc(78 / 1920 * 100vw);
 }
 
-.participation, .schedule, .fq, .partners, .prize, .form {
+button {
+  border: none;
+  position: relative;
+  background: none;
+  color: white;
+
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+button.animated-gradient {
+  background: linear-gradient(90deg, #ff7200, #de0074, #0000e8);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s infinite ease-in-out;
+  transition: background-position 0.3s ease, -webkit-text-fill-color 0.3s ease;
+}
+
+#participation, #schedule, #fq, #partners, #prize, #form {
   font-family: 'Gilroy', arial, serif;
   font-weight: 500;
   font-size: calc(44 / 1920 * 100vw);
   color: white;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: calc(15 / 1920 * 100vw);
   cursor: pointer;
   border: none;
   outline: none;
-  cursor: pointer;
+}
+
+#null {
+  border: none;
+  outline: none;
+}
+
+.anchor {
+  width: calc(15 / 1920 * 100vw);
+  height: calc(15 / 1920 * 100vw);
+  background: white; /* Якорь невидимый */
+  position: absolute;
+}
+
+/* Расположение якорей относительно кнопок */
+.anchor[data-target="null"] {
+  top: calc(1000 / 1920 * 100vw);
+}
+
+.anchor[data-target="participation"] {
+  top: calc(1500 / 1920 * 100vw);
+}
+
+.anchor[data-target="schedule"] {
+  top: calc(3000 / 1920 * 100vw);
+}
+
+.anchor[data-target="fq"] {
+  top: calc(4000 / 1920 * 100vw);
+}
+
+.anchor[data-target="partners"] {
+  top: calc(5000 / 1920 * 100vw);
+}
+
+.anchor[data-target="prize"] {
+  top: calc(6000 / 1920 * 100vw);
+}
+
+.anchor[data-target="form"] {
+  top: calc(7000 / 1920 * 100vw);
 }
 
 .participation:hover, .schedule:hover, .fq:hover, .partners:hover, .prize:hover, .form:hover {
   color: #BEBEBE;
 }
 
-
 .title {
   font-family: 'Gilroy', arial, serif;
   color: white;
   font-size: calc(465 / 1920 * 100vw);
   position: relative;
-  margin-top: calc(20 / 1920 * 100vw);
+  margin-top: calc(110 / 1920 * 100vw);
   margin-left: calc(78 / 1920 * 100vw);
   text-align: left;
   font-weight: 700;
@@ -105,6 +191,96 @@ a, a:hover, a:visited {
 }
 
 .second_screen {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: calc(1920 / 1920 * 100vw); /* Настраивайте по необходимости */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+.wrap {
+  max-width: calc(1920 / 1920 * 100vw);
+  padding: calc(20 / 1920 * 100vw);
+  display: flex;
+  flex-direction: column;
+  gap: calc(-730 / 1920 * 100vw);
+}
+
+.items-wrap {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: calc(50 / 1920 * 100vw);
+  height: auto;
+  margin-bottom: calc(-80 / 1920 * 100vw);
+}
+.items {
+  flex-shrink: 0;
+  display: flex;
+  gap: calc(50 / 1920 * 100vw);
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.item {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(234 / 1920 * 100vw);
+  font-weight: 500;
+  color: #262626;
+  transition: all 0.1s ease-in-out;
+}
+
+.marquee {
+  animation: scroll 20s linear infinite;
+}
+
+.reverce {
+  animation-direction: reverse;
+}
+
+.items-wrap:hover .marquee {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 20px));
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.third_screen {
   width: calc(1920 / 1920 * 100vw);
   height: calc(1080 / 1920 * 100vw);
 }
+
