@@ -36,6 +36,9 @@
   <div class="sub_title">институт цифры</div>
 </div>
 <div class="second_screen">
+  <div class="text_one_second">участвовать могут \n<br>студенты и школьники</div>
+  <div class="text_second_second">которые разбираются<br>в направлениях</div>
+  <img class="arrow" src="img/arrow.svg">
   <div class="wrap">
     <div class="items-wrap">
       <div class="items marquee">
@@ -55,8 +58,9 @@
         <div class="item">front-end</div>
       </div>
     </div>
+
     <div class="items-wrap">
-      <div class="items marquee reverce">
+      <div class="items marquee reverse">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
         <div class="item">UX/UI</div>
@@ -64,7 +68,7 @@
         <div class="item">project менеджмент</div>
         <div class="item">front-end</div>
       </div>
-      <div aria-hidden="true" class="items marquee reverce">
+      <div aria-hidden="true" class="items marquee reverse">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
         <div class="item">UX/UI</div>
@@ -73,6 +77,7 @@
         <div class="item">front-end</div>
       </div>
     </div>
+
     <div class="items-wrap">
       <div class="items marquee">
         <div class="item">back-end</div>
@@ -91,8 +96,9 @@
         <div class="item">front-end</div>
       </div>
     </div>
+
     <div class="items-wrap">
-      <div class="items marquee reverce">
+      <div class="items marquee reverse">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
         <div class="item">UX/UI</div>
@@ -100,7 +106,7 @@
         <div class="item">project менеджмент</div>
         <div class="item">front-end</div>
       </div>
-      <div aria-hidden="true" class="items marquee reverce">
+      <div aria-hidden="true" class="items marquee reverse">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
         <div class="item">UX/UI</div>
@@ -110,9 +116,48 @@
       </div>
     </div>
   </div>
-
 </div>
-<div class="third_screen"></div>
+<div class="third_screen">
+  <div class="track_buttons">
+    <div class="track_button_text">трек:</div>
+    <button class="track_button_student">студенты</button>
+    <button class="track_button_pupil">школьники</button>
+  </div>
+  <div class="schedule_boxes">
+    <div class="registration_box box">
+      <img class="registration_icon" src="img/reg_icon.svg">
+      <div class="registration_title">регистрация</div>
+      <div class="registration_dates">14 января<br>—<br>21 января</div>
+    </div>
+    <div class="open_box box">
+      <img class="open_icon" src="img/open_icon.svg">
+      <div class="open_title">открытие</div>
+      <div class="open_dates">22 января<br>12:00</div>
+    </div>
+    <div class="vs_box box">
+      <img class="vs_icon" src="img/vs_icon.svg">
+      <div class="vs_title">соревнования</div>
+      <div class="vs_dates students">22 января 13:00<br>—<br>23 января 11:00</div>
+      <div class="vs_dates pupils">22 января 13:00<br>—<br>22 января 19:00</div>
+    </div>
+    <div class="results_box box">
+      <img class="results_icon" src="img/results_icon.svg">
+      <div class="results_title">результаты</div>
+      <div class="results_dates students">23 января<br>12:00</div>
+      <div class="results_dates pupils">22 января<br>20:00</div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 <script id="vertexShader" type="x-shader/x-vertex">
@@ -352,6 +397,7 @@
 
 <script src="js/Shader_WOGUI.js"></script>
 <script src="js/GradientButtons.js"></script>
+<script src="js/Track_buttons.js"></script>
 
 </body>
 </html>
