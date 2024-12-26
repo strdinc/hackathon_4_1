@@ -71,10 +71,10 @@ a, a:hover, a:visited {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Навигация на всю ширину */
-  z-index: 1000; /* Поверх остального контента */
-  backdrop-filter: blur(10px); /* Размытие под навигацией */
-  background-color: rgba(10, 10, 13, 0.25); /* Полупрозрачный фон */
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background-color: rgba(24, 24, 24, 0.14);
   display: flex;
 
   padding-bottom: calc(5 / 1920 * 100vw);
@@ -250,13 +250,13 @@ button.animated-gradient {
   align-items: center;
   font-size: calc(234 / 1920 * 100vw);
   font-weight: 600;
-  color: #191919;
+  color: #262626;
   transition: all 0.1s ease-in-out;
 }
 
 .item:hover {
   transform: scale(1.05);
-  color: #262626;
+  color: #414141;
 }
 
 .marquee {
