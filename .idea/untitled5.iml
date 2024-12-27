@@ -12,5 +12,6 @@
     <orderEntry type="library" name="gsap" level="application" />
     <orderEntry type="library" name="dat.gui" level="application" />
     <orderEntry type="library" name="Gilroy-Extrabold" level="application" />
+    <orderEntry type="library" name="twitter-bootstrap" level="application" />
   </component>
 </module>

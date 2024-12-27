@@ -60,7 +60,6 @@ a, a:hover, a:visited {
   margin: 0; /* Убираем возможные отступы */
 }
 
-
 .first_screen {
   width: calc(1920 / 1920 * 100vw);
   height: calc(1080 / 1920 * 100vw);
@@ -74,7 +73,7 @@ a, a:hover, a:visited {
   width: 100%;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  background-color: rgba(24, 24, 24, 0.14);
+  background-color: rgba(24, 24, 24, 0.41);
   display: flex;
 
   padding-bottom: calc(5 / 1920 * 100vw);
@@ -313,9 +312,10 @@ button.animated-gradient {
   display: flex;
   flex-direction: column;
   width: calc(1920 / 1920 * 100vw);
-  height: calc(1080 / 1920 * 100vw);
+  height: auto;
   padding-left: calc(78 / 1920 * 100vw);
   padding-top: calc(78 / 1920 * 100vw);
+  margin-bottom: calc(57 / 1920 * 100vw);
 }
 
 .track_buttons{
@@ -424,4 +424,83 @@ button.animated-gradient {
   color: #DE0074;
   margin-bottom: calc(85 / 1920 * 100vw);
   line-height: calc(57 / 1920 * 100vw);
+}
+
+.fourth_screen {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-top: calc(160 / 1920 * 100vw);
+  padding-right: calc(78 / 1920 * 100vw);
+  z-index: 0;
+}
+
+.fq_title {
+  font-size: calc(85 / 1920 * 100vw);
+  font-weight: 700;
+  color: white;
+  position: relative;
+  margin-left: calc(78 / 1920 * 100vw);
+  margin-right: calc(148 / 1920 * 100vw);
+}
+
+.qa_box {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-top: calc(30 / 1920 * 100vw);
+}
+
+.qa {
+  color: white;
+}
+
+.q {
+  border: none;
+  font-size: calc(40 / 1920 * 100vw);
+  font-weight: 500;
+  padding-left: calc(10 / 1920 * 100vw);
+}
+
+.qa .q:focus {
+  outline: none; /* Убирает обводку при фокусе */
+}
+
+.qa .q:active {
+  outline: none; /* Убирает обводку при нажатии */
+}
+
+.a {
+  border-color: transparent;
+  background-color: transparent;
+  padding-left: calc(10 / 1920 * 100vw);
+  font-weight: 200;
+  font-size: calc(35 / 1920 * 100vw);
+  line-height: calc(40 / 1920 * 100vw);
+}
+
+.qa_line {
+  padding: 0;
+  margin-right: calc(-30 / 1920 * 100vw);
+  width: calc(1481 / 1920 * 100vw);
+  height: auto;
+
+}
+
+.qa .a {
+  display: none;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.qa.active .a {
+  display: block;
+  max-height: 1000px;
+}
+
+.qa .q {
+  cursor: pointer;
 }

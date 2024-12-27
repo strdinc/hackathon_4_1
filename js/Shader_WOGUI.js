@@ -3,20 +3,24 @@ window.addEventListener('load', init, false);
 function init() {
   createWorld();
   createLights();
-  //createGrid();
   createPrimitive();
 
-  //---
+  // Принудительно обновляем размеры
+  onWindowResize();
+
   animation();
 }
+
 //--------------------------------------------------------------------
 var scene, camera, renderer, container;
 var _width, _height;
 var mat;
 
 function createWorld() {
-  _width = window.innerWidth;
-  _height = window.innerHeight;
+  const container = document.querySelector('.container');
+  _width = container.clientWidth;
+  _height = container.clientHeight;
+
   //---
   scene = new THREE.Scene();
   scene.fog = new THREE.Fog(0x000000, 5, 15);
@@ -29,20 +33,22 @@ function createWorld() {
   renderer.setSize(_width, _height);
   renderer.shadowMap.enabled = true;
 
-  // Добавляем рендерер в контейнер first_screen
-  const container = document.querySelector('.container');
-  container.style.position = "relative"; // Убедитесь, что контейнер имеет относительное позиционирование
+  // Добавляем рендерер в контейнер
+  container.style.position = "relative";
   renderer.domElement.style.position = "absolute";
   renderer.domElement.style.top = "0";
   renderer.domElement.style.left = "0";
   renderer.domElement.style.width = "100%";
   renderer.domElement.style.height = "100%";
-  renderer.domElement.style.zIndex = "-1"; // Размещаем на заднем плане
+  renderer.domElement.style.zIndex = "-1";
   container.appendChild(renderer.domElement);
 
   //---
   window.addEventListener('resize', onWindowResize, false);
 }
+
+document.addEventListener('DOMContentLoaded', init);
+
 
 
 function onWindowResize() {
