@@ -6,8 +6,6 @@
   <meta charset="UTF-8">
   <title>Shader-Experiment</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css'><link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="css/screen_21_9.css">
-  <link rel="stylesheet" href="css/phone_screen.css">
   <link rel="stylesheet" href="css/style.css">
   <link href = "font/Gilroy/stylesheet.css" rel = "stylesheet" type = "text/css" />
 </head>
@@ -17,15 +15,13 @@
   <img src="icon.svg">
 </div>
 
-
-
 <div class="container"></div>
-<div class="anchor" data-target="start"></div>
+<div class="anchor" data-target="null"></div>
 <div class="first_screen" id="first_screen">
-  <div class="navigation desktop">
+  <div class="navigation">
     <div class="dates">16-17 ноября</div>
     <div class="buttons">
-      <button class="gradient-text" id="start"><img src="img/arrow_top.png" class="arrow_top_png"></button>
+      <button class="gradient-text" id="null"></button>
       <button class="gradient-text" id="participation">участие</button>
       <button class="gradient-text" id="schedule">расписание</button>
       <button class="gradient-text" id="fq">f&q</button>
@@ -42,7 +38,7 @@
   <div class="text_one_second">участвовать могут \n<br>студенты и школьники</div>
   <div class="text_second_second">которые разбираются<br>в направлениях</div>
   <img class="arrow" src="img/arrow.svg">
-  <div class="wrap desktop">
+  <div class="wrap">
     <div class="items-wrap">
       <div class="items marquee">
         <div class="item">back-end</div>
@@ -62,7 +58,7 @@
       </div>
     </div>
 
-    <div class="items-wrap desktop">
+    <div class="items-wrap">
       <div class="items marquee reverse">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
@@ -81,7 +77,7 @@
       </div>
     </div>
 
-    <div class="items-wrap desktop">
+    <div class="items-wrap">
       <div class="items marquee">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
@@ -100,7 +96,7 @@
       </div>
     </div>
 
-    <div class="items-wrap desktop">
+    <div class="items-wrap">
       <div class="items marquee reverse">
         <div class="item">back-end</div>
         <div class="item">тестирование</div>
@@ -233,28 +229,24 @@
       <input type="tel" class="phone input_f" id="phone" name="phone" required placeholder="номер телефона (+7xxxxxxxxxx)">
 
       <input type="email" class="email input_f" id="email" name="email" required placeholder="email">
-      <div class="track_container but_cont">
-        <div class="track_question que">трек:</div>
+      <div class="track_container">
+        <div class="track_question">трек:</div>
         <button type="button" class="form_track_button_student" id="form_track_button_student">студенты</button>
         <button type="button" class="form_track_button_pupil" id="form_track_button_pupil">школьники</button>
       </div>
-      <div class="command_container but_cont">
-        <div class="command_question que">есть команда:</div>
+      <div class="command_container">
+        <div class="command_question">есть команда:</div>
         <button type="button" class="form_command_button_yes" id="form_command_button_yes">да</button>
         <button type="button" class="form_command_button_no" id="form_command_button_no">нет</button>
       </div>
-      <input type="text" class="command_name input_f hidden" id="command_name" required placeholder="название команды">
-      <div class="politics_question">
-        нажимая кнопку <strong>отправить</strong> вы соглашаетесь<br>с <ins>положением</ins> и <ins>политикой конфиденциальности</ins>
+      <div class="politics_container">
+        <div class="politics_question">политика конфиденциальности и положение</div>
+        <button type="button" class="form_politics_button_yes" id="form_politics_button_yes">согласен</button>
       </div>
+      <button type="submit">отправить</button>
 
-      <button class="submit_button" type="submit">отправить</button>
     </form>
   </div>
-  <a href="https://kemsu.ru/"><img src="img/KemSU_logo.png" class="KemSU_logo"></a>
-  <a href="https://vk.com/digital_kemsu"><img src="img/Idigit_logo.png" class="ID_logo"></a>
-  <a href="documents/competition_regulations.pdf" class="competition_regulations" >положение</a>
-  <a href="documents/privacy_policy.pdf" class="privacy_policy">политика конфиденциальности</a>
 </div>
 
 
@@ -509,8 +501,6 @@
 <script src="js/faq.js"></script>
 <script src="js/preloader.js"></script>
 <script src="js/scroll.js"></script>
-<script src="js/forms_buttons.js"></script>
-<script src="js/screen_size.js"></script>
 
 </body>
 </html>
