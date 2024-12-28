@@ -219,6 +219,31 @@
 </div>
 <div class="seventh_screen" id="seventh_screen">
   <div class="anchor" data-target="form"></div>
+  <div class="form_title">заявка участника</div>
+  <div class="form_container">
+    <form action="/submit" method="post">
+      <input type="text" id="full_name" name="full_name" required placeholder="фио">
+      <input type="text" id="institution" name="institution" required placeholder="учебное заведение">
+      <input type="tel" id="phone" name="phone" required placeholder="номер телефона (+7xxxxxxxxxx)" pattern="^\+7\d(10)$">
+      <input type="email" id="email" name="email" required placeholder="email">
+      <div class="track_container">
+        <div class="track_question">трек:</div>
+        <button type="button" class="form_track_button_student" id="form_track_button_student">студенты</button>
+        <button type="button" class="form_track_button_pupil" id="form_track_button_pupil">школьники</button>
+      </div>
+      <div class="command_container">
+        <div class="command_question">есть команда:</div>
+        <button type="button" class="form_command_button_yes" id="form_command_button_yes">да</button>
+        <button type="button" class="form_command_button_no" id="form_command_button_no">нет</button>
+      </div>
+      <div class="politics_container">
+        <div class="politics_question">политика конфиденциальности и положение</div>
+        <button type="button" class="form_politics_button_yes" id="form_politics_button_yes">согласен</button>
+      </div>
+      <button type="submit">отправить</button>
+
+    </form>
+  </div>
 </div>
 
 

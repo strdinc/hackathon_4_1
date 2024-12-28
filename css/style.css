@@ -196,7 +196,7 @@ button.animated-gradient {
 
 .anchor {
   width: calc(15 / 1920 * 100vw);
-  height: calc(15 / 1920 * 100vw);
+  height: calc(70 / 1920 * 100vw);
   background: white; /* Якорь невидимый */
   position: absolute;
   z-index: -1;
@@ -208,15 +208,15 @@ button.animated-gradient {
 }
 
 .anchor[data-target="participation"] {
-  top: calc(540 / 1920 * 100vw);
+  top: calc(500 / 1920 * 100vw);
 }
 
 .anchor[data-target="schedule"] {
-  margin-top: calc(446 / 1920 * 100vw);
+  margin-top: calc(200 / 1920 * 100vw);
 }
 
 .anchor[data-target="fq"] {
-  top: calc(540 / 1920 * 100vw);
+  top: calc(450 / 1920 * 100vw);
 }
 
 .anchor[data-target="partners"] {
@@ -599,4 +599,23 @@ button.animated-gradient {
   font-size: calc(235 / 1920 * 100vw);
   font-weight: 600;
   color: white;
+}
+
+.seventh_screen {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-top: calc(30 / 1920 * 100vw);
+  padding-left: calc(78 / 1920 * 100vw);
+  padding-right: calc(78 / 1920 * 100vw);
+}
+
+.form_title {
+  font-size: calc(104 / 1920 * 100vw);
+  font-weight: 500;
+}
+
+.form_container {
+  
 }
