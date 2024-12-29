@@ -15,13 +15,15 @@
   <img src="icon.svg">
 </div>
 
+
+
 <div class="container"></div>
-<div class="anchor" data-target="null"></div>
+<div class="anchor" data-target="start"></div>
 <div class="first_screen" id="first_screen">
   <div class="navigation">
     <div class="dates">16-17 ноября</div>
     <div class="buttons">
-      <button class="gradient-text" id="null"></button>
+      <button class="gradient-text" id="start"><img src="img/arrow_top.png" class="arrow_top_png"></button>
       <button class="gradient-text" id="participation">участие</button>
       <button class="gradient-text" id="schedule">расписание</button>
       <button class="gradient-text" id="fq">f&q</button>
@@ -222,28 +224,35 @@
   <div class="form_title">заявка участника</div>
   <div class="form_container">
     <form action="/submit" method="post">
-      <input type="text" id="full_name" name="full_name" required placeholder="фио">
-      <input type="text" id="institution" name="institution" required placeholder="учебное заведение">
-      <input type="tel" id="phone" name="phone" required placeholder="номер телефона (+7xxxxxxxxxx)" pattern="^\+7\d(10)$">
-      <input type="email" id="email" name="email" required placeholder="email">
-      <div class="track_container">
-        <div class="track_question">трек:</div>
+      <input type="text" class="full_name input_f" id="full_name" name="full_name" required placeholder="фио">
+
+      <input type="text" class="institution input_f" id="institution" name="institution" required placeholder="учебное заведение">
+
+      <input type="tel" class="phone input_f" id="phone" name="phone" required placeholder="номер телефона (+7xxxxxxxxxx)">
+
+      <input type="email" class="email input_f" id="email" name="email" required placeholder="email">
+      <div class="track_container but_cont">
+        <div class="track_question que">трек:</div>
         <button type="button" class="form_track_button_student" id="form_track_button_student">студенты</button>
         <button type="button" class="form_track_button_pupil" id="form_track_button_pupil">школьники</button>
       </div>
-      <div class="command_container">
-        <div class="command_question">есть команда:</div>
+      <div class="command_container but_cont">
+        <div class="command_question que">есть команда:</div>
         <button type="button" class="form_command_button_yes" id="form_command_button_yes">да</button>
         <button type="button" class="form_command_button_no" id="form_command_button_no">нет</button>
       </div>
-      <div class="politics_container">
-        <div class="politics_question">политика конфиденциальности и положение</div>
-        <button type="button" class="form_politics_button_yes" id="form_politics_button_yes">согласен</button>
+      <input type="text" class="command_name input_f hidden" id="command_name" required placeholder="название команды">
+      <div class="politics_question">
+        нажимая кнопку <strong>отправить</strong> вы соглашаетесь<br>с <ins>положением</ins> и <ins>политикой конфиденциальности</ins>
       </div>
-      <button type="submit">отправить</button>
 
+      <button class="submit_button" type="submit">отправить</button>
     </form>
   </div>
+  <a href="https://kemsu.ru/"><img src="img/KemSU_logo.png" class="KemSU_logo"></a>
+  <a href="https://vk.com/digital_kemsu"><img src="img/Idigit_logo.png" class="ID_logo"></a>
+  <a href="documents/competition_regulations.pdf" class="competition_regulations" >положение</a>
+  <a href="documents/privacy_policy.pdf" class="privacy_policy">политика конфиденциальности</a>
 </div>
 
 
@@ -498,6 +507,7 @@
 <script src="js/faq.js"></script>
 <script src="js/preloader.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/forms_buttons.js"></script>
 
 </body>
 </html>

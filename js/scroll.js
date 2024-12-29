@@ -92,4 +92,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Инициализация
   scrollToSection(currentSectionIndex);
+
+  // Привязка кнопок к секциям
+  const buttonSectionMap = {
+    participation: 1, // Индексы соответствуют sectionIds
+    schedule: 2,
+    fq: 3,
+    partners: 4,
+    prize: 5,
+    form: 6
+  };
+
+  Object.keys(buttonSectionMap).forEach(buttonId => {
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.addEventListener("click", () => {
+        const targetIndex = buttonSectionMap[buttonId];
+        if (targetIndex !== undefined) {
+          currentSectionIndex = targetIndex;
+          scrollToSection(targetIndex);
+        }
+      });
+    }
+  });
+
+  // Обработчик для кнопки Start
+  const startButton = document.getElementById("start");
+  if (startButton) {
+    startButton.addEventListener("click", () => {
+      currentSectionIndex = 0; // Индекс first_screen
+      scrollToSection(currentSectionIndex);
+    });
+  }
 });
