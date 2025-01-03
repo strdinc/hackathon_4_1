@@ -1,4 +1,9 @@
 @media screen and (max-aspect-ratio: 1/1) {
+
+  .desktop {
+    display: none;
+  }
+
   @keyframes gradientMove {
     0% {
       background-position: 0% 50%;
